@@ -41,6 +41,8 @@ addItemButton.addEventListener('click', function (event) {
     // add your code here
     var text = document.getElementById('text').value;
 
+
+
     todoItems.push(text);
 
     var pval = '';
@@ -49,7 +51,7 @@ addItemButton.addEventListener('click', function (event) {
         pval = pval + todoItems[i];
 
     }
-    document.getElementById('list').innerHTML = " " + pval;
+    document.getElementById('list').innerHTML = pval;
 
 });
 
