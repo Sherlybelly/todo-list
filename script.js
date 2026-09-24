@@ -1,5 +1,7 @@
 // ADD YOUR CODE BELOW 
 
+const { createElement } = require("react");
+
 // 1. Start with an array of strings (ex: "grapes", "bread", "tea")
 let todoItems = [
     // add more items here
@@ -25,14 +27,11 @@ const list = document.getElementById('list');
 
 // 3. Write a function to display all items in the #list element
 function updateList() {
-    const list = document.getElementById("list");
-    list.innerHTML = "";
-
-    todoItems.forEach((item) => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        list.appendChild(li);
-    });
+    const todolist = document.getElementById("list");
+    const item = createElement("li");
+    item.interText=input.value;
+    list.appendChild(li);
+   
 }
 
 updateList();
