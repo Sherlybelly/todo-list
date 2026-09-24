@@ -30,10 +30,9 @@ function updateList() {
 
     todoItems.forEach((item) => {
         const li = document.createElement("li");
-        li.textContent = item;
+        li.innerText = item;
         list.appendChild(li);
     });
-
 
 }
 
