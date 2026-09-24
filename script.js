@@ -3,6 +3,9 @@
 // 1. Start with an array of strings (ex: "grapes", "bread", "tea")
 let todoItems = [
     // add more items here
+    'grapes',
+    'bread',
+    'tea'
 ];
 
 
