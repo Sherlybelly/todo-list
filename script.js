@@ -5,7 +5,8 @@ let todoItems = [
     // add more items here
     'grapes',
     'bread',
-    'tea'
+    'tea',
+
 ];
 
 
@@ -16,7 +17,7 @@ const addItemButton = document.getElementById('add-item-button');
 const sortBtn = document.getElementById('sort');
 const clearBtn = document.getElementById('clear');
 const list = document.getElementById('list');
-
+const textInput = document.getElementById('text')
 
 
 
@@ -25,15 +26,14 @@ const list = document.getElementById('list');
 // 3. Write a function to display all items in the #list element
 function updateList() {
     // add your code here
-    const list = document.getElementById("list");
-    list.innerHTML = "";
+list.innerHTML = '';
 
-    todoItems.forEach((item) => {
-        const li = document.createElement("li");
-        li.innerText = item;
-        list.appendChild(li);
-    });
-
+    for (let i = 0; i < todoItems.length; i++) {
+      
+        const liElement = document.createElement('li')
+        liElement.innerText = todoItems[i];
+        list.appendChild(liElement);
+    }
 }
 
 updateList();
@@ -43,10 +43,15 @@ updateList();
 // 4. Handle adding a new item when the form is submitted
 addItemButton.addEventListener('click', function (event) {
     // add your code here
-    const text = document.getElementById('text').value;
-    todoItems.push(text);
-    updateList();
-
+    const value = textInput.value;
+    if (value.length > 0){
+        todoItems.push(value);
+        console.log(todoItems);
+        
+updateList();
+       textInput.value ='';
+    }
+ 
 
 });
 
@@ -56,7 +61,12 @@ addItemButton.addEventListener('click', function (event) {
 // 5. Sort items alphabetically when sortBtn is clicked
 sortBtn.addEventListener("click", () => {
     // add your code here
-    todoItems.sort();
+    // todoItems.sort();
+
+    todoItems.sort(function(a,b){
+        return a.localeCompare(b);
+    })
+
     updateList();
 });
 
