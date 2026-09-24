@@ -17,8 +17,8 @@ const addItemButton = document.getElementById('add-item-button');
 // add more variables below
 const sortBtn = document.getElementById('sort');
 const clearBtn = document.getElementById('clear');
+const list = document.getElementById('list');
 
-const list = document.getElementById('list')
 
 
 
@@ -27,14 +27,15 @@ const list = document.getElementById('list')
 // 3. Write a function to display all items in the #list element
 function updateList() {
     // add your code here
+    const list = document.getElementById("list");
+    list.innerHTML = "";
 
-    const list = document.getElementById('list')
-    const item = document.createElement('li')
-    item.innerText = input.value
-    list.appendChild(item)
+    todoItems.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+    });
 
-
-    
 
 }
 
@@ -45,8 +46,8 @@ updateList();
 // 4. Handle adding a new item when the form is submitted
 addItemButton.addEventListener('click', function (event) {
     // add your code here
-    text = document.getElementById('text').value;
-    list.push(text);
+    const text = document.getElementById('text').value;
+    todoItems.push(text);
     updateList();
 
 
