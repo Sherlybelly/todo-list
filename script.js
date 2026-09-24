@@ -28,30 +28,18 @@ function updateList() {
     // add your code here
     let text = todoItems
 
-    document.getElementById("list").innerHTML = text;
+    document.getElementById("list").innerText = text;
   
 }
 
 updateList();
 
 
-// const input = document.getElementById('textinput');
-
-// input.addEventListener('keyup', function (event) {
-//     console.log(event);
-//     const text = event.target.value;
-//     console.log(text)
-//     const paragraphElement = document.getElementById('livedisplay');
-//     paragraphElement.innerText = text;
-//     //key up for lesslag
-//     //key down for lag
-//     //change when u click out
-// })
-
 
 // 4. Handle adding a new item when the form is submitted
 addItemButton.addEventListener('click', function () {
     // add your code here
+    document.appendChild("add-item-button")
 });
 
 
