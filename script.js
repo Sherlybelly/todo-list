@@ -15,6 +15,7 @@ const addItemButton = document.getElementById('add-item-button');
 // add more variables below
 const sortButton = document.getElementById('sort');
 const clearButton = document.getElementById('clear');
+
 const list = document.getElementById('list');
 
 
@@ -24,11 +25,25 @@ const list = document.getElementById('list');
 // 3. Write a function to display all items in the #list element
 function updateList() {
     // add your code here
-    var todoItems = Document.getElementById('list')
+    document.appendChild(list);
+  
 }
 
 updateList();
 
+
+// const input = document.getElementById('textinput');
+
+// input.addEventListener('keyup', function (event) {
+//     console.log(event);
+//     const text = event.target.value;
+//     console.log(text)
+//     const paragraphElement = document.getElementById('livedisplay');
+//     paragraphElement.innerText = text;
+//     //key up for lesslag
+//     //key down for lag
+//     //change when u click out
+// })
 
 
 // 4. Handle adding a new item when the form is submitted
