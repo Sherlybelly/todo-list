@@ -37,9 +37,11 @@ updateList();
 
 
 // 4. Handle adding a new item when the form is submitted
-addItemButton.addEventListener('click', function () {
+addItemButton.addEventListener('click', function (event) {
     // add your code here
+    const list event.value
     document.appendChild("add-item-button")
+    todoItems.push("placeholder");
 });
 
 
