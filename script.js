@@ -13,6 +13,7 @@ let todoItems = [
 // 2. Create variables for each interactive DOM element
 const addItemButton = document.getElementById('add-item-button');
 // add more variables below
+
 const sortButton = document.getElementById('sort');
 const clearButton = document.getElementById('clear');
 
@@ -25,7 +26,9 @@ const list = document.getElementById('list');
 // 3. Write a function to display all items in the #list element
 function updateList() {
     // add your code here
-    document.appendChild(list);
+    let text = todoItems
+
+    document.getElementById("list").innerHTML = text;
   
 }
 
