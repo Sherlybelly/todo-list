@@ -27,11 +27,17 @@ const list = document.getElementById('list');
 
 // 3. Write a function to display all items in the #list element
 function updateList() {
-    const todolist = document.getElementById("list");
-    const item = createElement("li");
-    item.interText=input.value;
-    list.appendChild(li);
+    // add your code here
    
+
+    const todoitem = document.getElementById('list')
+    const item = document.createElement('li')
+    item.innerText = input.value
+    todoitem.appendChild(item)
+
+
+    
+
 }
 
 updateList();
@@ -44,6 +50,7 @@ addItemButton.addEventListener('click', function (event) {
     text = document.getElementById('text').value;
     todoItems.push(text);
     updateList();
+
 
 });
 
