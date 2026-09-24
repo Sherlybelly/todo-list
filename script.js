@@ -1,7 +1,5 @@
 // ADD YOUR CODE BELOW 
 
-const { createElement } = require("react");
-
 // 1. Start with an array of strings (ex: "grapes", "bread", "tea")
 let todoItems = [
     // add more items here
