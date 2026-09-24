@@ -13,9 +13,9 @@ let todoItems = [
 // 2. Create variables for each interactive DOM element
 const addItemButton = document.getElementById('add-item-button');
 // add more variables below
+// const sortBtn = document.getElementById('sort');
+// const clearBtn = document.getElementById('clear');
 
-const sortButton = document.getElementById('sort');
-const clearButton = document.getElementById('clear');
 
 const list = document.getElementById('list');
 
@@ -29,7 +29,7 @@ function updateList() {
     let text = todoItems
 
     document.getElementById("list").innerText = text;
-  
+
 }
 
 updateList();
@@ -39,23 +39,33 @@ updateList();
 // 4. Handle adding a new item when the form is submitted
 addItemButton.addEventListener('click', function (event) {
     // add your code here
-    const list event.value
-    document.appendChild("add-item-button")
-    todoItems.push("placeholder");
+     var text = document.getElementById('text').value;
+
+     todoItems.push(text);
+
+     var pval = ",";
+
+     for(i=0;i<todoItems.length;i++){
+        pval= '<br/>' + todoItems[i];
+
+     }
+document.getElementById('list').innerHTML= pval;
+
 });
 
 
 
 
-// 5. Sort items alphabetically when sortBtn is clicked
-sortBtn.addEventListener("click", () => {
-    // add your code here
-});
+// // 5. Sort items alphabetically when sortBtn is clicked
+// sortBtn.addEventListener("click", () => {
+//     // add your code here
+// });
 
 
 
 
-// 6. Clear all items when clearBtn is clicked
-clearBtn.addEventListener("click", () => {
-    // add your code here
-});
+// // 6. Clear all items when clearBtn is clicked
+// clearBtn.addEventListener("click", () => {
+//     // add your code here
+//     todoItems = documen
+// });
