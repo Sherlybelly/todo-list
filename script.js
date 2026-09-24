@@ -15,7 +15,7 @@ const addItemButton = document.getElementById('add-item-button');
 // add more variables below
 const sortBtn = document.getElementById('sort');
 const clearBtn = document.getElementById('clear');
-const itemInput = document.getElementById('text');
+
 
 const list = document.getElementById('list');
 
@@ -41,13 +41,12 @@ addItemButton.addEventListener('click', function (event) {
     // add your code here
     var text = document.getElementById('text').value;
 
-
     todoItems.push(text);
 
-    var pval = '';
+    var textInput = '';
 
     for (i = 0; i < todoItems.length; i++) {
-        pval = pval + todoItems[i];
+        textInput = textInput + todoItems[i];
 
     }
     updateList();
