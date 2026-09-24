@@ -28,7 +28,7 @@ function updateList() {
     // add your code here
     let text = todoItems
 
-    document.getElementById("list").innerText = text;
+    document.getElementById("list").innerText = text 
 
 }
 
@@ -42,7 +42,6 @@ addItemButton.addEventListener('click', function (event) {
     var text = document.getElementById('text').value;
 
 
-
     todoItems.push(text);
 
     var pval = '';
@@ -51,7 +50,7 @@ addItemButton.addEventListener('click', function (event) {
         pval = pval + todoItems[i];
 
     }
-    document.getElementById('list').innerHTML = pval;
+    updateList();
 
 });
 
