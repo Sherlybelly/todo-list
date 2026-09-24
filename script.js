@@ -25,11 +25,14 @@ const list = document.getElementById('list');
 
 // 3. Write a function to display all items in the #list element
 function updateList() {
-    // add your code here
-    let text = todoItems
+    const list = document.getElementById("list");
+    list.innerHTML = "";
 
-    document.getElementById("list").innerText = text 
-
+    todoItems.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+    });
 }
 
 updateList();
@@ -39,16 +42,8 @@ updateList();
 // 4. Handle adding a new item when the form is submitted
 addItemButton.addEventListener('click', function (event) {
     // add your code here
-    var text = document.getElementById('text').value;
-
+    text = document.getElementById('text').value;
     todoItems.push(text);
-
-    var textInput = '';
-
-    for (i = 0; i < todoItems.length; i++) {
-        textInput = textInput + todoItems[i];
-
-    }
     updateList();
 
 });
